@@ -7,7 +7,14 @@
             <div class="card">
 
                 <div class="card-body">
-                  <a href="{{ route('posts') }}">  <h3>Posts</h3>  </a>
+                  <ul>
+                    @foreach ($posts as $post)
+                      <li>
+                        <h3> {{ $post -> title }} </h3>
+                        {{ $post -> views }} views
+                      </li>
+                    @endforeach
+                  </ul>
                 </div>
             </div>
         </div>
