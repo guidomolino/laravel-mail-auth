@@ -10,7 +10,7 @@
                   <ul>
                     @foreach ($posts as $post)
                       <li>
-                        <h3> {{ $post -> title }} </h3>
+                        <h3><a href="{{ route('post.show', $post -> id) }}"> {{ $post -> title }} </a></h3>
                         {{ $post -> views }} views
                       </li>
                     @endforeach
