@@ -11,7 +11,13 @@
                 </div>
                 <div class="card-body">
                   {{ $post -> content }} <br> <br>
-                  {{ $post -> views }}
+                  {{ $post -> views }} views
+                  <a href="{{ route('posts') }}">↩Return</a>
+                  {{-- middleware in LoggedController --}}
+                  @auth
+                    <a class="btn btn-primary" href="">Edit</a>
+                    <a class="btn btn-danger" href="{{route('post.delete', $post -> id)}}">Delete</a>
+                  @endauth
                 </div>
             </div>
         </div>
