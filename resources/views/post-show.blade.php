@@ -15,7 +15,7 @@
                   <a href="{{ route('posts') }}">↩Return</a>
                   {{-- middleware in LoggedController --}}
                   @auth
-                    <a class="btn btn-primary" href="">Edit</a>
+                    <a class="btn btn-primary" href="{{route('post.edit', $post-> id)}}">Edit</a>
                     <a class="btn btn-danger" href="{{route('post.delete', $post -> id)}}">Delete</a>
                   @endauth
                 </div>
